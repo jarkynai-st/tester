@@ -1,0 +1,8 @@
+<p>Опрос по предмету: {{ poll.name }} </p>
+<br>
+{% for question in questions %}
+<a href="{% url 'answer' question.id %}"> {{ question.title }}</a>
+<br>
+{{question.poll.points}}
+
+{% endfor %}
